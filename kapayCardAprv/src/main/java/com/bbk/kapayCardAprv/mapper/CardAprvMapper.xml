@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+ 
+<mapper namespace="com.bbk.kapayCardAprv.mapper.CardAprvMapper">
+ 
+    <select id="countCardAprv" resultType="int">
+        SELECT MAX(ID) FROM CARD_APRV
+    </select>
+    
+    <select id="searchAllCardAprv" resultType="com.bbk.kapayCardAprv.domain.CardAprvVO">
+        SELECT * FROM CARD_APRV
+    </select>
+        
+    <select id="searchCardAprv" parameterType="string" resultType="com.bbk.kapayCardAprv.domain.CardAprvVO">
+        SELECT * FROM CARD_APRV WHERE APRV_NO = #{aprv_no}
+    </select>    
+    
+    <insert id="insertCardAprv" parameterType="com.bbk.kapayCardAprv.domain.CardAprvVO">
+        INSERT INTO CARD_APRV 
+		(
+		 ID
+		,APRV_NO
+		,REL_APRV_NO
+		,APRV_TYPE
+		,ENC_CARD_INFO
+		,MON_INST
+		,APRV_AMT
+		,APRV_VAT
+		,APRV_MSG
+		,INPUT_DT
+		) 
+		VALUES
+		(
+		 #{id}
+		,#{aprv_no}
+		,#{rel_aprv_no}
+		,#{aprv_type}
+		,#{enc_card_info}
+		,#{mon_inst}
+		,#{aprv_amt}
+		,#{aprv_vat}
+		,#{aprv_msg}
+		,#{input_dt}
+		)
+    </insert>
+    
+    <select id="searchRelAprvNo" parameterType="string" resultType="int">
+        SELECT COUNT(*) FROM CARD_APRV WHERE REL_APRV_NO = #{aprv_no}
+    </select>     
+
+</mapper>
+
+
