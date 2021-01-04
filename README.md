@@ -77,19 +77,19 @@
 ## 빌드 및 실행방법<br>
 > [과제 소스 코드 확인 URL](https://github.com/bb1118/kapayCardAprv.git) <br>
 > 
-> - Spring Boot 와 H2 DB 설치
-> - 소스 import
-> - Spring Boot App 실행
-> - 서버 실행 시, data-h2.sql 을 읽어서 자동으로 DB에 기본으로 4개의 임시 데이터 insert
-> - port 는 8181 로 설정해둔 상태이기 때문에 H2 DB 는 http://localhost:8181/h2-console 에서 확인 가능
-> - H2 DB 설정
-> > - Saved Settings: Generic H2 (Embedded)
-> > - Driver Class : org.h2.Driver
-> > - JDBC URL : jdbc:h2:mem:testDB
-> > - User Name : sa
-> > - Password : 1234
-> - H2 DB 웹 콘솔에서 생성되어있는 4개의 임시 데이터 및 테이블 확인 가능
-> - POST전송 테스트를 위한 POSTMAN 설치 ( chrome 웹 스토어에서 Postman 을 찾아서 설치하거나 [POSTMAN](https://www.postman.com/) 에서 다운로드) 
+> 1. Spring Boot 와 H2 DB 설치
+> 2. 소스 import
+> 3. Spring Boot App 실행
+> > - 서버 실행 시, data-h2.sql 을 읽어서 자동으로 DB에 기본으로 4개의 임시 데이터 insert
+> 4. H2 DB 설정
+> > > - Saved Settings: Generic H2 (Embedded)
+> > > - Driver Class : org.h2.Driver
+> > > - JDBC URL : jdbc:h2:mem:testDB
+> > > - User Name : sa
+> > > - Password : 1234
+> > - port 는 8181 로 설정해둔 상태이기 때문에 H2 DB 는 http://localhost:8181/h2-console 에서 확인 가능
+> > - H2 DB 웹 콘솔에서 생성되어있는 4개의 임시 데이터 및 테이블 확인 가능
+> 5. POST전송 테스트를 위한 POSTMAN 설치 ( chrome 웹 스토어에서 Postman 을 찾아서 설치하거나 [POSTMAN](https://www.postman.com/) 에서 다운로드) 
 > 
 > <br>
 > 
